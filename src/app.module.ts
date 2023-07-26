@@ -6,7 +6,11 @@ import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/store'), ProductModule, UserModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/store'),
+    ProductModule,
+    UserModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
